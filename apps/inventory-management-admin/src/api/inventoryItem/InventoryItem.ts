@@ -1,4 +1,5 @@
 export type InventoryItem = {
+  create: Date | null;
   createdAt: Date;
   description: string | null;
   id: string;

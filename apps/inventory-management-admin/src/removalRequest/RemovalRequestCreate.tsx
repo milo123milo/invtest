@@ -3,6 +3,7 @@ import {
   Create,
   SimpleForm,
   CreateProps,
+  DateTimeInput,
   TextInput,
   SelectInput,
 } from "react-admin";
@@ -13,6 +14,7 @@ export const RemovalRequestCreate = (
   return (
     <Create {...props}>
       <SimpleForm>
+        <DateTimeInput label="Delete" source="deleteField" />
         <TextInput label="item" source="item" />
         <TextInput label="requestedBy" source="requestedBy" />
         <SelectInput

@@ -39,6 +39,17 @@ class RemovalRequestOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  deleteField?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   id?: SortOrder;
 
   @ApiProperty({

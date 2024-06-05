@@ -18,6 +18,7 @@ import { InventoryItemService } from "../inventoryItem.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  create: new Date(),
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
@@ -26,6 +27,7 @@ const CREATE_INPUT = {
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  create: new Date(),
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
@@ -35,6 +37,7 @@ const CREATE_RESULT = {
 };
 const FIND_MANY_RESULT = [
   {
+    create: new Date(),
     createdAt: new Date(),
     description: "exampleDescription",
     id: "exampleId",
@@ -44,6 +47,7 @@ const FIND_MANY_RESULT = [
   },
 ];
 const FIND_ONE_RESULT = {
+  create: new Date(),
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
@@ -134,6 +138,7 @@ describe("InventoryItem", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
+        create: CREATE_RESULT.create.toISOString(),
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
@@ -146,6 +151,7 @@ describe("InventoryItem", () => {
       .expect([
         {
           ...FIND_MANY_RESULT[0],
+          create: FIND_MANY_RESULT[0].create.toISOString(),
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
@@ -169,6 +175,7 @@ describe("InventoryItem", () => {
       .expect(HttpStatus.OK)
       .expect({
         ...FIND_ONE_RESULT,
+        create: FIND_ONE_RESULT.create.toISOString(),
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
@@ -182,6 +189,7 @@ describe("InventoryItem", () => {
       .expect(HttpStatus.CREATED)
       .expect({
         ...CREATE_RESULT,
+        create: CREATE_RESULT.create.toISOString(),
         createdAt: CREATE_RESULT.createdAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })

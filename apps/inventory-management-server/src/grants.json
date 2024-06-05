@@ -1,61 +1,61 @@
 [
   {
     "role": "user",
-    "resource": "Role",
+    "resource": "InventoryItem",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Role",
+    "resource": "InventoryItem",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Role",
+    "resource": "InventoryItem",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Role",
+    "resource": "InventoryItem",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Role",
+    "resource": "InventoryItem",
     "action": "read:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "InventoryItem",
+    "resource": "Role",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "InventoryItem",
+    "resource": "Role",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "InventoryItem",
+    "resource": "Role",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "InventoryItem",
+    "resource": "Role",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "InventoryItem",
+    "resource": "Role",
     "action": "read:any",
     "attributes": "*"
   },

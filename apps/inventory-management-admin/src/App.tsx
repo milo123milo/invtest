@@ -5,14 +5,14 @@ import { theme } from "./theme/theme";
 import Login from "./Login";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard";
-import { RoleList } from "./role/RoleList";
-import { RoleCreate } from "./role/RoleCreate";
-import { RoleEdit } from "./role/RoleEdit";
-import { RoleShow } from "./role/RoleShow";
 import { InventoryItemList } from "./inventoryItem/InventoryItemList";
 import { InventoryItemCreate } from "./inventoryItem/InventoryItemCreate";
 import { InventoryItemEdit } from "./inventoryItem/InventoryItemEdit";
 import { InventoryItemShow } from "./inventoryItem/InventoryItemShow";
+import { RoleList } from "./role/RoleList";
+import { RoleCreate } from "./role/RoleCreate";
+import { RoleEdit } from "./role/RoleEdit";
+import { RoleShow } from "./role/RoleShow";
 import { RemovalRequestList } from "./removalRequest/RemovalRequestList";
 import { RemovalRequestCreate } from "./removalRequest/RemovalRequestCreate";
 import { RemovalRequestEdit } from "./removalRequest/RemovalRequestEdit";
@@ -48,18 +48,18 @@ const App = (): React.ReactElement => {
         loginPage={Login}
       >
         <Resource
-          name="Role"
-          list={RoleList}
-          edit={RoleEdit}
-          create={RoleCreate}
-          show={RoleShow}
-        />
-        <Resource
           name="InventoryItem"
           list={InventoryItemList}
           edit={InventoryItemEdit}
           create={InventoryItemCreate}
           show={InventoryItemShow}
+        />
+        <Resource
+          name="Role"
+          list={RoleList}
+          edit={RoleEdit}
+          create={RoleCreate}
+          show={RoleShow}
         />
         <Resource
           name="RemovalRequest"

@@ -52,6 +52,7 @@ export class RemovalRequestControllerBase {
       data: data,
       select: {
         createdAt: true,
+        deleteField: true,
         id: true,
         item: true,
         requestedBy: true,
@@ -81,6 +82,7 @@ export class RemovalRequestControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deleteField: true,
         id: true,
         item: true,
         requestedBy: true,
@@ -109,6 +111,7 @@ export class RemovalRequestControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deleteField: true,
         id: true,
         item: true,
         requestedBy: true,
@@ -146,6 +149,7 @@ export class RemovalRequestControllerBase {
         data: data,
         select: {
           createdAt: true,
+          deleteField: true,
           id: true,
           item: true,
           requestedBy: true,
@@ -182,6 +186,7 @@ export class RemovalRequestControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deleteField: true,
           id: true,
           item: true,
           requestedBy: true,

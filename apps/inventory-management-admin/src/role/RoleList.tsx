@@ -15,6 +15,7 @@ export const RoleList = (props: ListProps): React.ReactElement => {
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
         <TextField label="name" source="name" />
+        <TextField label="service" source="service" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>

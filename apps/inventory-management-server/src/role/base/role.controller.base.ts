@@ -52,6 +52,7 @@ export class RoleControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        service: true,
         updatedAt: true,
       },
     });
@@ -77,6 +78,7 @@ export class RoleControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        service: true,
         updatedAt: true,
       },
     });
@@ -103,6 +105,7 @@ export class RoleControllerBase {
         createdAt: true,
         id: true,
         name: true,
+        service: true,
         updatedAt: true,
       },
     });
@@ -138,6 +141,7 @@ export class RoleControllerBase {
           createdAt: true,
           id: true,
           name: true,
+          service: true,
           updatedAt: true,
         },
       });
@@ -172,6 +176,7 @@ export class RoleControllerBase {
           createdAt: true,
           id: true,
           name: true,
+          service: true,
           updatedAt: true,
         },
       });

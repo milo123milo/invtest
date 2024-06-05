@@ -7,24 +7,27 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Role {
-  createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
-  name      String?
-  updatedAt DateTime @updatedAt
-}
-
 model InventoryItem {
-  createdAt   DateTime @default(now())
+  create      DateTime?
+  createdAt   DateTime  @default(now())
   description String?
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   name        String?
   quantity    Int?
-  updatedAt   DateTime @updatedAt
+  updatedAt   DateTime  @updatedAt
+}
+
+model Role {
+  createdAt DateTime  @default(now())
+  id        String    @id @default(cuid())
+  name      String?
+  service   DateTime?
+  updatedAt DateTime  @updatedAt
 }
 
 model RemovalRequest {
   createdAt   DateTime                  @default(now())
+  deleteField DateTime?
   id          String                    @id @default(cuid())
   item        String?
   requestedBy String?
@@ -33,15 +36,16 @@ model RemovalRequest {
 }
 
 model User {
-  createdAt DateTime @default(now())
-  email     String?  @unique
+  createdAt DateTime  @default(now())
+  email     String?   @unique
   firstName String?
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   lastName  String?
   password  String
   roles     Json
-  updatedAt DateTime @updatedAt
-  username  String   @unique
+  title     DateTime?
+  updatedAt DateTime  @updatedAt
+  username  String    @unique
 }
 
 enum EnumRemovalRequestStatus {

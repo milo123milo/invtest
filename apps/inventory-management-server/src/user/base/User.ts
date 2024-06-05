@@ -76,6 +76,17 @@ class User {
   roles!: JsonValue;
 
   @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  title!: Date | null;
+
+  @ApiProperty({
     required: true,
   })
   @IsDate()
