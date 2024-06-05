@@ -13,6 +13,7 @@ export const RemovalRequestList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="Delete" source="deleteField" />
         <TextField label="ID" source="id" />
         <TextField label="item" source="item" />
         <TextField label="requestedBy" source="requestedBy" />

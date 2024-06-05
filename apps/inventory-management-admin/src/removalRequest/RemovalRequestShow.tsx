@@ -12,6 +12,7 @@ export const RemovalRequestShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="Delete" source="deleteField" />
         <TextField label="ID" source="id" />
         <TextField label="item" source="item" />
         <TextField label="requestedBy" source="requestedBy" />

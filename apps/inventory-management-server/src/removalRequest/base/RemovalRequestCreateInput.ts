@@ -11,11 +11,23 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsEnum } from "class-validator";
+import { IsDate, IsOptional, IsString, IsEnum } from "class-validator";
+import { Type } from "class-transformer";
 import { EnumRemovalRequestStatus } from "./EnumRemovalRequestStatus";
 
 @InputType()
 class RemovalRequestCreateInput {
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deleteField?: Date | null;
+
   @ApiProperty({
     required: false,
     type: String,

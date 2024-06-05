@@ -11,11 +11,22 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsString, IsOptional, IsInt } from "class-validator";
+import { IsDate, IsOptional, IsString, IsInt } from "class-validator";
 import { Type } from "class-transformer";
 
 @ObjectType()
 class InventoryItem {
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  create!: Date | null;
+
   @ApiProperty({
     required: true,
   })

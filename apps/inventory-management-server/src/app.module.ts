@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { RoleModule } from "./role/role.module";
 import { InventoryItemModule } from "./inventoryItem/inventoryItem.module";
+import { RoleModule } from "./role/role.module";
 import { RemovalRequestModule } from "./removalRequest/removalRequest.module";
 import { UserModule } from "./user/user.module";
 import { HealthModule } from "./health/health.module";
@@ -20,8 +20,8 @@ import { AuthModule } from "./auth/auth.module";
   imports: [
     ACLModule,
     AuthModule,
-    RoleModule,
     InventoryItemModule,
+    RoleModule,
     RemovalRequestModule,
     UserModule,
     HealthModule,

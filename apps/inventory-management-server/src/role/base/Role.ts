@@ -44,6 +44,17 @@ class Role {
   name!: string | null;
 
   @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  service!: Date | null;
+
+  @ApiProperty({
     required: true,
   })
   @IsDate()

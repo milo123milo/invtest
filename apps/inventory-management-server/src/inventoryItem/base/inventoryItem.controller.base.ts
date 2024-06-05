@@ -51,6 +51,7 @@ export class InventoryItemControllerBase {
     return await this.service.createInventoryItem({
       data: data,
       select: {
+        create: true,
         createdAt: true,
         description: true,
         id: true,
@@ -80,6 +81,7 @@ export class InventoryItemControllerBase {
     return this.service.inventoryItems({
       ...args,
       select: {
+        create: true,
         createdAt: true,
         description: true,
         id: true,
@@ -108,6 +110,7 @@ export class InventoryItemControllerBase {
     const result = await this.service.inventoryItem({
       where: params,
       select: {
+        create: true,
         createdAt: true,
         description: true,
         id: true,
@@ -145,6 +148,7 @@ export class InventoryItemControllerBase {
         where: params,
         data: data,
         select: {
+          create: true,
           createdAt: true,
           description: true,
           id: true,
@@ -181,6 +185,7 @@ export class InventoryItemControllerBase {
       return await this.service.deleteInventoryItem({
         where: params,
         select: {
+          create: true,
           createdAt: true,
           description: true,
           id: true,

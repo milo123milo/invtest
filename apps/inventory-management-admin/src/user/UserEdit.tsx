@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import {
   Edit,
   SimpleForm,
@@ -6,7 +7,9 @@ import {
   TextInput,
   PasswordInput,
   SelectArrayInput,
+  DateTimeInput,
 } from "react-admin";
+
 import { ROLES_OPTIONS } from "../user/RolesOptions";
 
 export const UserEdit = (props: EditProps): React.ReactElement => {
@@ -23,6 +26,7 @@ export const UserEdit = (props: EditProps): React.ReactElement => {
           optionText="label"
           optionValue="value"
         />
+        <DateTimeInput label="title" source="title" />
         <TextInput label="Username" source="username" />
       </SimpleForm>
     </Edit>

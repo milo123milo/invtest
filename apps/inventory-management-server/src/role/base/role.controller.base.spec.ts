@@ -21,12 +21,14 @@ const CREATE_INPUT = {
   createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
+  service: new Date(),
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
+  service: new Date(),
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
@@ -34,6 +36,7 @@ const FIND_MANY_RESULT = [
     createdAt: new Date(),
     id: "exampleId",
     name: "exampleName",
+    service: new Date(),
     updatedAt: new Date(),
   },
 ];
@@ -41,6 +44,7 @@ const FIND_ONE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
+  service: new Date(),
   updatedAt: new Date(),
 };
 
@@ -127,6 +131,7 @@ describe("Role", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        service: CREATE_RESULT.service.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -139,6 +144,7 @@ describe("Role", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          service: FIND_MANY_RESULT[0].service.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -162,6 +168,7 @@ describe("Role", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        service: FIND_ONE_RESULT.service.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -175,6 +182,7 @@ describe("Role", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        service: CREATE_RESULT.service.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })
       .then(function () {
